@@ -12,6 +12,13 @@ struct nodo{
     nodo* left;
     nodo* right;
     nodo* parent;
+    nodo(){
+        string color = "RED";
+        int data = 0;
+        nodo* left;
+        nodo* right;
+        nodo*parent;
+    }
     nodo(int data)
         : data(data)
         , color("RED")
@@ -31,5 +38,7 @@ class redBlack{
     
     public:
         redBlack();
+        nodo* getRoot();
         void insert(int data);
+        void inorder(nodo* root);
 };

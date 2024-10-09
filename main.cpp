@@ -13,4 +13,5 @@ int main() {
     redBlack arbol; 
     arbol.insert(10);
     arbol.insert(20);
+    arbol.inorder(arbol.getRoot());
 }

@@ -1,6 +1,7 @@
 #include "redBlack.h"
 
 redBlack :: redBlack(){
+    NIL = reservar(0);
     NIL -> color = "BLACK";
     root = NIL;
 }
@@ -124,3 +125,17 @@ void redBlack :: insert(int data){
     z -> color = "RED";
     fixInsert(z);
 }
+
+void redBlack :: inorder(nodo* current){
+    if(current != NIL){
+        inorder(current ->left);
+        cout << current -> data << " ";
+        inorder(current -> right);
+    }
+}
+
+nodo* redBlack :: getRoot(){
+    return root;
+}
+    
+   
