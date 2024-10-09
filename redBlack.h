@@ -39,6 +39,8 @@ class redBlack{
     public:
         redBlack();
         nodo* getRoot();
+        int getData(nodo* actual);
         void insert(int data);
         void inorder(nodo* root);
+        nodo* search(nodo* root,int data);
 };

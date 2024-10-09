@@ -137,5 +137,19 @@ void redBlack :: inorder(nodo* current){
 nodo* redBlack :: getRoot(){
     return root;
 }
+
+nodo* redBlack :: search(nodo* current, int k){
+    if(current == NIL || k == current -> data){
+        return current;
+    }
+    if(k < current -> data){
+        return search(current -> left, k); 
+    }
+    return search(current -> right, k);
+}
+
+int redBlack :: getData(nodo* actual){
+    return (actual -> data);
+}
     
    

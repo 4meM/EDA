@@ -14,4 +14,6 @@ int main() {
     arbol.insert(10);
     arbol.insert(20);
     arbol.inorder(arbol.getRoot());
+    nodo* value = arbol.search(arbol.getRoot(),30);
+    cout << arbol.getData(value) << endl;
 }
